@@ -1,0 +1,86 @@
+#+title: Install scimax with homebrew
+#+author: John Kitchin
+
+The goal of this repo is to make a Tap for homebrew to install scimax and dependencies. 
+
+Goals:
+1. install scimax with dependencies
+   1. Emacs-plus@28 (optional)
+   2. git https://formulae.brew.sh/formula/git#default
+   3. coreutils https://formulae.brew.sh/formula/coreutils#default
+   4. curl https://formulae.brew.sh/formula/curl#default
+   5. cask https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/cask.rb
+   6. aspell https://formulae.brew.sh/formula/aspell#default
+   7. enchant https://formulae.brew.sh/formula/enchant#default
+   8. ag https://formulae.brew.sh/formula/the_silver_searcher#default
+   9. grep https://formulae.brew.sh/formula/grep#default
+   10. latex (texlive) https://formulae.brew.sh/formula/texlive#default (optional)
+   11. python  https://formulae.brew.sh/cask/anaconda (optional)
+   12. wkhtmltodpf https://formulae.brew.sh/cask/wkhtmltopdf#default
+   13. tesseract https://formulae.brew.sh/formula/tesseract#default
+
+2. create a command called scimax
+
+   1. runs something like "emacs -q -l $(scimax-dir)/init.el"
+
+
+* Notes
+
+Initial Formula was setup like this
+
+#+BEGIN_SRC sh
+brew create https://github.com/jkitchin/scimax/archive/refs/heads/master.zip
+#+END_SRC
+
+this created /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/scimax.rb
+
+I moved it to [[./Formula/scimax.rb]], and have edited it extensively.
+
+See the [[./makefile]] for useful build commands.
+
+* build notes
+
+** DONE an issue with the zip file is it is not a git clone, so the submodules do not work right.
+CLOSED: [2023-04-26 Wed 07:55]
+
+I figured out how to get the git repo, working. it requires head, and might make versioning trickier later. Maybe I can do something with tags.
+
+This 
+[[/usr/local/Cellar/scimax/HEAD-7c147b0]]
+
+** TODO update user files
+
+These should be moved to something like ~/.emacs.d/scimax or ~/.config/scimax, or some user-defined space (I guess by env-var?).
+
+** TODO scimax script doesn't appear to be on path
+
+It is created at [[file:/usr/local/Cellar/scimax/HEAD-7c147b0/bin/scimax][file:/usr/local/Cellar/scimax/HEAD-7c147b0/bin/scimax]], just not linked somewhere.
+
+* other brew formula to learn from
+
+Check out https://github.com/d12frosted/homebrew-emacs-plus
+
+especially https://github.com/d12frosted/homebrew-emacs-plus/blob/master/build (a build script)
+
+https://github.com/d12frosted/homebrew-emacs-plus/blob/master/Formula/emacs-plus%4028.rb
+
+
+
+* brew notes
+
+#+BEGIN_SRC sh
+brew --repository
+#+END_SRC
+
+#+RESULTS:
+: /usr/local/Homebrew
+
+brew variables
+https://docs.brew.sh/Formula-Cookbook#variables-for-directory-locations
+
+
+** Taps
+
+https://docs.brew.sh/Taps
+
+See [[/usr/local/Homebrew/Library/Taps/]]
