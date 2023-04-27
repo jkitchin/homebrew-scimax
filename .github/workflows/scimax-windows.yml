@@ -1,0 +1,26 @@
+name: scimax-windows
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "Formula/scimax.rb"      
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build scimax on windows
+        run: |
+          sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" 
+          brew install --head ./Formula/scimax.rb
+
+          
+
