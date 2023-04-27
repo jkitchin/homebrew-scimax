@@ -1,0 +1,26 @@
+name: scimax
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "Formula/scimax.rb"
+
+  schedule:
+    - cron: "0 2 * * *"
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build scimax 
+        run: brew install ./Formula/scimax.rb 
+
