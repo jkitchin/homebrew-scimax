@@ -71,6 +71,8 @@ class Scimax < Formula
 
     See [TODO] for configuration options.
 
+    TODO: SCIMAX_USER_DIR env var.
+
     Get started by running scimax in a terminal.
     EOS
   end
