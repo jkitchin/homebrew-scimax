@@ -7,8 +7,6 @@ on:
     paths:
       - "Formula/scimax.rb"
 
-  schedule:
-    - cron: "0 2 * * *"
 
 jobs:
   build:
