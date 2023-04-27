@@ -35,6 +35,7 @@ class Scimax < Formula
   # https://github.com/orgs/Homebrew/discussions/3163
   # depends_on "wkhtmltopdf"   
 
+  # Unclear how to add options here, e.g. imagemagick, etc.
   if build.with? "emacs"
     depends_on "d12frosted/homebrew-emacs-plus/emacs-plus@28"
   end
