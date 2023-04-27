@@ -16,6 +16,8 @@ jobs:
         # windows-latest does not work
         # setting up homebrew fails
         # /usr/bin/bash: /D:/a/_actions/Homebrew/actions/master/setup-homebrew/main.sh: No such file or directory
+        # ubuntu test takes ~7min
+        # mac test is very slow...
         os: [ubuntu-latest, macos-latest]
 
     steps:
