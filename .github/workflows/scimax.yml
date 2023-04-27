@@ -18,5 +18,5 @@ jobs:
       - uses: Homebrew/actions/setup-homebrew@master
 
       - name: Build scimax 
-        run: brew install ./Formula/scimax.rb 
+        run: brew install --head ./Formula/scimax.rb 
 
