@@ -26,12 +26,3 @@ jobs:
 
       - name: Build scimax 
         run: brew install --head ./Formula/scimax.rb
-
-  windows:
-    os: windows-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Build scimax on windows
-        run: sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" 
-
