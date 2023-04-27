@@ -1,6 +1,6 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+
 class Scimax < Formula
   desc "Awesome editing for scientists and engineers."
   homepage "https://github.com/jkitchin/scimax"
