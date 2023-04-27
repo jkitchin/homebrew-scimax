@@ -69,6 +69,8 @@ class Scimax < Formula
     <<~EOS
     Congratulations, you have installed scimax!
 
+    See [TODO] for configuration options.
+
     Get started by running scimax in a terminal.
     EOS
   end
