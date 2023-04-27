@@ -21,9 +21,9 @@ jobs:
       - shell: wsl-bash {0}
         run: |
           sudo apt update
-          sudo apt-get install build-essential curl file git
+          sudo apt-get install --yes build-essential curl file git
           sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" 
-          brew install --head ./Formula/scimax.rb
+          ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
 
           
 
