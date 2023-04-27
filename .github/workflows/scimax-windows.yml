@@ -16,9 +16,9 @@ jobs:
         os: [windows-latest]
 
     steps:
+      - name: Build scimax on windows
       - uses: actions/checkout@v3
       - uses: Vampire/setup-wsl@v2
-      - name: Build scimax on windows
       - shell: wsl-bash {0}
         run: |
           sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" 
