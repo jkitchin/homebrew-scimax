@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - master
-    paths:
-      - "Formula/scimax.rb"
-
 
 jobs:
   build:
