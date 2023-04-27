@@ -1,7 +1,9 @@
 #+title: Install scimax with homebrew
 #+author: John Kitchin
 
-[![scimax](https://github.com/jkitchin/homebrew-scimax/actions/workflows/scimax.yml/badge.svg)](https://github.com/jkitchin/homebrew-scimax/actions/workflows/scimax.yml)
+#+BEGIN_HTML
+<a href="https://github.com/jkitchin/homebrew-scimax/actions/workflows/scimax.yml"><img src="https://github.com/jkitchin/homebrew-scimax/actions/workflows/scimax.yml/badge.svg"></a>
+#+END_HTML
 
 The goal of this repo is to make a Tap for homebrew to install scimax and dependencies. 
 
