@@ -21,10 +21,8 @@ jobs:
         with:
           wsl-shell-user: actions
           wsl-shell-command: sudo apt update && apt-get install --yes build-essential curl file git
-      - shell: wsl-bash {0}
-        run: |
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
-          HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
+          wsl-shell-command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+          wsl-shell-command: HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
 
           
 
