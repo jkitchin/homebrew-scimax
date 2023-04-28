@@ -20,9 +20,9 @@ jobs:
       - uses: Vampire/setup-wsl@v2
         with:
           wsl-shell-user: actions
-          wsl-shell-command: sudo apt update && apt-get install --yes build-essential curl file git
-          wsl-shell-command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-          wsl-shell-command: HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
+          wsl-shell-command: sudo apt update && apt-get install --yes build-essential curl file git && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" && HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
+          
+          
 
           
 
