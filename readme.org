@@ -3,6 +3,8 @@
 
 #+BEGIN_HTML
 <a href="https://github.com/jkitchin/homebrew-scimax/actions/workflows/scimax.yml"><img src="https://github.com/jkitchin/homebrew-scimax/actions/workflows/scimax.yml/badge.svg"></a>
+
+<a href="https://github.com/jkitchin/homebrew-scimax/actions/workflows/scimax-windows.yml"><img src="https://github.com/jkitchin/homebrew-scimax/actions/workflows/scimax-windows.yml/badge.svg"></a>
 #+END_HTML
 
 The goal of this repo is to make a Tap for homebrew to install scimax and dependencies. 
@@ -18,7 +20,7 @@ Options:
 
 --with-emacs
 --with-latex
---with-python
+--with-anaconda
 
 These have not been exhaustively tested.
 
