@@ -33,9 +33,10 @@ jobs:
           which git
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
           export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-          brew doctor          
+          brew doctor
+          echo "Done with brew install"
           HOMEBREW_NO_INSTALL_FROM_API=1 brew install --head --verbose --formula ./Formula/scimax.rb
-
+          echo "Done with scimax install"
           
           
 
