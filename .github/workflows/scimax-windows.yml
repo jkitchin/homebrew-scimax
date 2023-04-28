@@ -34,7 +34,7 @@ jobs:
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
           export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
           brew doctor          
-#          HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
+          HOMEBREW_NO_INSTALL_FROM_API=1 brew install --head ./Formula/scimax.rb
 
           
           
