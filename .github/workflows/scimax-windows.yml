@@ -19,8 +19,9 @@ jobs:
       - uses: Vampire/setup-wsl@v2
       - run: net user
       - uses: actions/checkout@v3
+
       - uses: Vampire/setup-wsl@v2
-        run: sudo apt update && apt-get install --yes build-essential curl file git && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" && HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
+      - run: sudo apt update && apt-get install --yes build-essential curl file git && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" && HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
 
           
           
