@@ -16,6 +16,7 @@ jobs:
         os: [windows-latest]
 
     steps:
+      - timeout-minutes: 20
       - uses: actions/checkout@v3
       - uses: Vampire/setup-wsl@v2
         with:
