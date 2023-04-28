@@ -18,12 +18,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: Vampire/setup-wsl@v2
+        with:
+          wsl-shell-user: actions
+          wsl-shell-command: sudo apt update && apt-get install --yes build-essential curl file git
       - shell: wsl-bash {0}
         run: |
-          sudo apt update
-          sudo apt-get install --yes build-essential curl file git
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
-          ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
+          HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
 
           
 
