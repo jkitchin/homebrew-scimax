@@ -22,9 +22,8 @@ jobs:
         run: |
           sudo apt update
           sudo apt-get install --yes build-essential curl file git
-          whoami
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh) 
-#          ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
+          ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
 
           
 
