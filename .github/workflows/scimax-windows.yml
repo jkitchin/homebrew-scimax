@@ -17,22 +17,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-        uses: Vampire/setup-wsl@v2
+      - uses: Vampire/setup-wsl@v2
         with:
           wsl-shell-user: linuxbrew
 
-        - shell: wsl-bash {0}
-          run: |
-            whoami
-            apt update && apt-get install --yes build-essential curl file git
+      - shell: wsl-bash {0}
+        run: |
+          whoami
+          apt update && apt-get install --yes build-essential curl file git
 
-        - shell: wsl-bash -u linuxbrew {0}
-          run : |          
-            whoami
-            which curl
-            which git
-            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-            HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
+      - shell: wsl-bash -u linuxbrew {0}
+        run : |          
+          whoami
+          which curl
+          which git
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+          HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
 
           
           
