@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "Formula/scimax.rb"      
+#    paths:
+#      - "Formula/scimax.rb"      
 
 jobs:
   build:
