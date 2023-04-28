@@ -33,7 +33,7 @@ jobs:
           which git
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
           export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-          ~/.linuxbrew/bin/brew doctor          
+          brew doctor          
 #          HOMEBREW_NO_INSTALL_FROM_API=1 ~/.linuxbrew/bin/brew install --head ./Formula/scimax.rb
 
           
