@@ -34,13 +34,6 @@ Finally, you probably need to install Anaconda Python. This is a cask, so instal
 brew install --cask anaconda
 #+END_SRC
 
-** Optional
-
-wkhtmltopdf is used to convert web-pages to images.
-
-#+BEGIN_SRC sh
-brew install --cask wkhtmltopdf
-#+END_SRC
 
 ** Installing scimax
 
@@ -50,6 +43,7 @@ After those, you can install scimax like this.
 brew tap jkitchin/homebrew-scimax
 $ brew install scimax
 #+END_SRC
+
 
 
 
