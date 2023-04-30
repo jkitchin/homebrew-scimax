@@ -34,20 +34,6 @@ class Scimax < Formula
   # https://github.com/orgs/Homebrew/discussions/3163
   # depends_on "wkhtmltopdf"   
 
-  # Unclear how to add options here, e.g. imagemagick, etc.
-  if build.with? "emacs"
-    depends_on "d12frosted/homebrew-emacs-plus/emacs-plus@28"
-  end
-
-  if build.with? "latex"
-    depends_on "texlive"
-  end
-
-  if build.with? "anaconda"
-    depends_on "anaconda"
-  end  
-
-
   def install
     # this goes in /usr/local/Cellar/scimax/3.0/bin/scimax
     # It is already executable
