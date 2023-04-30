@@ -35,17 +35,20 @@ class Scimax < Formula
   # depends_on "wkhtmltopdf"   
 
   def install
-    # this goes in /usr/local/Cellar/scimax/3.0/bin/scimax
+    # this goes in /usr/local/Cellar/scimax/<version>/bin/scimax
     # It is already executable
     (bin/"scimax").write <<~EOS
       #!/bin/bash
-      /usr/local/bin/emacs --eval="(add-to-list 'load-path \"#{elisp}\")" $@
+      emacs --eval="(add-to-list 'load-path \"#{elisp}\")" $@
     EOS
 
     # This seems to copy scimax files to this location
-    # whoa.. this goes in /usr/local/Cellar/scimax/3.0/share/emacs/site-lisp/scimax
+    # whoa.. this goes in /usr/local/Cellar/scimax/<version>/share/emacs/site-lisp/scimax
     elisp.install Pathname.glob("*")
-    # system "git", "clone", "https://github.com/jkitchin/scimax.git", "#{elisp}"
+
+    # should I byte-compile?
+    system "emacs", "-batch", "--eval=(byte-recompile-directory \"#{elisp}\")"
+    
     # this should pull packages from ELPA, MELPA, etc.
     system "emacs", "--batch", "-l", "#{elisp}/init.el"
   end
