@@ -54,7 +54,7 @@ class Scimax < Formula
     # It is already executable
     (bin/"scimax").write <<~EOS
       #!/bin/bash
-      /usr/local/bin/emacs -q -l #{elisp}/init.el $@
+      /usr/local/bin/emacs -l #{elisp}/init.el $@
     EOS
 
     # This seems to copy scimax files to this location
@@ -62,7 +62,7 @@ class Scimax < Formula
     # elisp.install Pathname.glob("*")
     system "git", "clone", "https://github.com/jkitchin/scimax.git", "#{elisp}"
     # this should pull packages from ELPA, MELPA, etc.
-    system "emacs", "--batch", "-q", "-l", "#{elisp}/init.el"
+    system "emacs", "--batch", "-l", "#{elisp}/init.el"
   end
 
   def caveats
