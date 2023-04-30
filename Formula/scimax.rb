@@ -30,10 +30,6 @@ class Scimax < Formula
   depends_on "tesseract"
   depends_on "sqlite"
 
-  # this is a cask, not sure it is possible here.
-  # https://github.com/orgs/Homebrew/discussions/3163
-  # depends_on "wkhtmltopdf"   
-
   def install
     # this goes in /usr/local/Cellar/scimax/<version>/bin/scimax
     # It is already executable
