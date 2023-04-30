@@ -1,7 +1,10 @@
-build:
+head:
 	HOMEBREW_NO_INSTALL_FROM_API=1 brew install --HEAD --build-from-source --verbose --debug --formula ./Formula/scimax.rb
 
-uninstall:
+build:
+	HOMEBREW_NO_INSTALL_FROM_API=1 brew install --build-from-source --verbose --debug --formula ./Formula/scimax.rb
+
+clean:
 	brew uninstall scimax
 
 
