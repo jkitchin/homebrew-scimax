@@ -29,9 +29,6 @@ This
 
 These should be moved to something like ~/.emacs.d/scimax or ~/.config/scimax, or some user-defined space (I guess by env-var?).
 
-** TODO scimax script doesn't appear to be on path
-
-It is created at [[file:/usr/local/Cellar/scimax/HEAD-7c147b0/bin/scimax][file:/usr/local/Cellar/scimax/HEAD-7c147b0/bin/scimax]], just not linked somewhere.
 
 ** TODO setup the tap
 
