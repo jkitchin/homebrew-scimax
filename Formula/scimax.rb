@@ -4,7 +4,7 @@
 class Scimax < Formula
   desc "Awesome editing for scientists and engineers."
   homepage "https://github.com/jkitchin/scimax"
-#  url "https://github.com/jkitchin/scimax/archive/refs/heads/master.zip"
+  url "https://github.com/jkitchin/scimax/archive/refs/heads/homebrew.zip"
   version "3.0"
   sha256 ""
   license "CC-BY-SA-4.0"
@@ -16,9 +16,8 @@ class Scimax < Formula
   option "with-anaconda", "build with anaconda"
 
   #
-  # dependencies
   head do
-    url "https://github.com/jkitchin/scimax.git", branch: "master"
+    url "https://github.com/jkitchin/scimax.git", branch: "homebrew"
   end
   
   depends_on "cask"
