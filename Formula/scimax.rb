@@ -47,7 +47,7 @@ class Scimax < Formula
     elisp.install Pathname.glob("*")
 
     # should I byte-compile?
-    system "emacs", "-batch", "--eval=(byte-recompile-directory \"#{elisp}\")"
+    system "emacs", "-batch", "-f", "batch-byte-compile" "#{elisp}/**.el"
     
     # this should pull packages from ELPA, MELPA, etc.
     system "emacs", "--batch", "-l", "#{elisp}/init.el"
