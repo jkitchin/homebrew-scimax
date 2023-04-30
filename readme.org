@@ -11,18 +11,47 @@ The goal of this repo is to make a Tap for homebrew to install scimax and depend
 
 * Installation
 
+** Prerequisites
+
+scimax needs working installations of Emacs, texlive and Python + Jupyter.
+
+If you need an Emacs, I recommend you run this:
+
 #+BEGIN_SRC sh
-brew tap jkitchin/homebrew-scimax
-$ brew install scimax  [options]
+brew tap d12frosted/emacs-plus
+brew install emacs-plus@28
 #+END_SRC
 
-Options:
+If you need texlive for making LaTeX and pdf files you should run:
 
---with-emacs
---with-latex
---with-anaconda
+#+BEGIN_SRC sh
+brew install texlive
+#+END_SRC
 
-These have not been exhaustively tested.
+Finally, you probably need to install Anaconda Python. This is a cask, so install it like this. This may be Mac specific. You can also install it from https://www.anaconda.com/download/. Other Python installations may work, but this one is the easiest and has most of what you need.
+
+#+BEGIN_SRC sh
+brew install --cask anaconda
+#+END_SRC
+
+** Optional
+
+wkhtmltopdf is used to convert web-pages to images.
+
+#+BEGIN_SRC sh
+brew install --cask wkhtmltopdf
+#+END_SRC
+
+** Installing scimax
+
+After those, you can install scimax like this.
+
+#+BEGIN_SRC sh
+brew tap jkitchin/homebrew-scimax
+$ brew install scimax
+#+END_SRC
+
+
 
 * Goals
 1. install scimax with dependencies
@@ -43,3 +72,8 @@ These have not been exhaustively tested.
 2. create a command called scimax
 
    1. runs something like "emacs -q -l $(scimax-dir)/init.el"
+
+* issues
+
+- [ ] confirm where user files go
+- [ ] make sure you can still install new packages.
