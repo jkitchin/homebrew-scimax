@@ -43,7 +43,9 @@ class Scimax < Formula
     elisp.install Pathname.glob("*")
 
     # should I byte-compile?
-    system "emacs", "-batch", "-f", "batch-byte-compile" "#{elisp}/**.el"
+    # This doesn't seem to byte-compile the right thing
+    # The lisp ends up in "/usr/local/opt/scimax/share/emacs/site-lisp/scimax/ and these are not byte-compiled from this
+    # system "emacs", "-batch", "-f", "batch-byte-compile" "#{elisp}/**.el"
     
     # this should pull packages from ELPA, MELPA, etc.
     system "emacs", "--batch", "-l", "#{elisp}/init.el"
@@ -55,7 +57,8 @@ class Scimax < Formula
 
     You are almost done. You should add this line to your ~/.emacs.d/init.el file
 
-    It should be one of the first things that is run in the file.
+    It should be one of the first things that is run in the file, and before any
+    of your code gets run.
 
     (load "#{elisp}/init.el")
 
