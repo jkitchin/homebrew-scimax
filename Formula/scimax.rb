@@ -53,13 +53,13 @@ class Scimax < Formula
     # It is already executable
     (bin/"scimax").write <<~EOS
       #!/bin/bash
-      /usr/local/bin/emacs -l #{elisp}/init.el $@
+      /usr/local/bin/emacs --eval="(add-to-list 'load-path \"#{elisp}\")" $@
     EOS
 
     # This seems to copy scimax files to this location
     # whoa.. this goes in /usr/local/Cellar/scimax/3.0/share/emacs/site-lisp/scimax
-    # elisp.install Pathname.glob("*")
-    system "git", "clone", "https://github.com/jkitchin/scimax.git", "#{elisp}"
+    elisp.install Pathname.glob("*")
+    # system "git", "clone", "https://github.com/jkitchin/scimax.git", "#{elisp}"
     # this should pull packages from ELPA, MELPA, etc.
     system "emacs", "--batch", "-l", "#{elisp}/init.el"
   end
@@ -68,11 +68,13 @@ class Scimax < Formula
     <<~EOS
     Congratulations, you have installed scimax!
 
-    See [TODO] for configuration options.
+    You are almost done. You should add this line to your ~/.emacs.d/init.el file
 
-    TODO: SCIMAX_USER_DIR env var.
+    It should be one of the first things that is run in the file.
 
-    Get started by running scimax in a terminal.
+    (load "#{elisp}/init.el")
+
+    Get started by running emacs in a terminal.
     EOS
   end
 
