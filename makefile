@@ -12,6 +12,13 @@ brew:
 	brew install scimax
 	scimax
 
+brew-head:
+	brew tap jkitchin/scimax
+	brew uninstall scimax || true
+	brew update
+	brew install --head scimax
+	scimax
+
 clean:
 	brew uninstall scimax
 
