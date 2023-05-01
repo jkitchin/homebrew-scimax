@@ -35,7 +35,7 @@ class Scimax < Formula
     # It is already executable
     (bin/"scimax").write <<~EOS
       #!/bin/bash
-      emacs --eval="(add-to-list 'load-path \"#{elisp}\")" $@
+      emacs $@ &
     EOS
 
     # This seems to copy scimax files to this location
@@ -55,10 +55,9 @@ class Scimax < Formula
     <<~EOS
     Congratulations, you have installed scimax!
 
-    You are almost done. You should add this line to your ~/.emacs.d/init.el file
-
-    It should be one of the first things that is run in the file, and before any
-    of your code gets run.
+    You are almost done. You should add this line to your ~/.emacs.d/init.el
+    file. It should be one of the first things that is run in the file, and
+    before any of your code gets run.
 
     (load "#{elisp}/init.el")
 
