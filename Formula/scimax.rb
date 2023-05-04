@@ -27,6 +27,7 @@ class Scimax < Formula
   depends_on "the_silver_searcher"
   depends_on "aspell"
   depends_on "enchant"
+  depends_on "typos-cli"
   depends_on "tesseract"
   depends_on "sqlite"
 
