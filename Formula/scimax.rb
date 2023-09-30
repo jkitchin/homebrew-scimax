@@ -11,9 +11,9 @@ class Scimax < Formula
 
   #
   # Options
-  option "with-emacs", "build with emacs"
-  option "with-latex", "build with texlive"
-  option "with-anaconda", "build with anaconda"
+  # option "with-emacs", "build with emacs"
+  # option "with-latex", "build with texlive"
+  # option "with-anaconda", "build with anaconda"
 
   #
   head do
