@@ -17,7 +17,7 @@ class Scimax < Formula
 
   #
   head do
-    url "https://github.com/jkitchin/scimax.git", branch: "homebrew"
+    url "https://github.com/jkitchin/scimax.git", branch: "master"
   end
   
   depends_on "cask"

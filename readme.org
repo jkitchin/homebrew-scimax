@@ -45,6 +45,19 @@ $ brew install scimax
 #+END_SRC
 
 
+*** Updating / reinstalling
+
+Probably you should first /uninstall/ scimax.
+
+#+BEGIN_SRC sh
+brew uninstall scimax
+#+END_SRC
+
+Then, it is a good idea to update brew, and reinstall it.
+
+#+BEGIN_SRC sh
+brew update && brew install scimax
+#+END_SRC
 
 
 * Goals

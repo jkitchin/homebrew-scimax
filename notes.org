@@ -25,12 +25,14 @@ I figured out how to get the git repo, working. it requires head, and might make
 This 
 [[/usr/local/Cellar/scimax/HEAD-7c147b0]]
 
-** TODO update user files
+** DONE update user files
+CLOSED: [2024-02-09 Fri 14:59]
 
 These should be moved to something like ~/.emacs.d/scimax or ~/.config/scimax, or some user-defined space (I guess by env-var?).
 
 
-** TODO setup the tap
+** DONE setup the tap
+CLOSED: [2024-02-09 Fri 14:59]
 
 https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap
 
